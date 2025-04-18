@@ -47,16 +47,16 @@ async function main(){
 
         await userModel.sync({alter: true});
         // console.log("Model synced");
-        const data=await userModel.create({
-            username: "Greg",
-            password: "test",
-            age: 25,
-            email: "abc@gmail.com"
-        });
-        console.log("user created");
+        // const data=await userModel.create({
+        //     username: "Greg",
+        //     password: "test",
+        //     age: 25,
+        //     email: "abc@gmail.com"
+        // });
+        // console.log("user created");
     }
     catch(error){
-        console.log("Some error has occurred. ", error.message);
+        console.log("Some error has occurred. ", error);
         sequelize.close();
     }
 }
